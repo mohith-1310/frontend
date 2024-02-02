@@ -10,14 +10,24 @@ function AdminDashboard() {
   const [param] = useSearchParams();
 
   const process = () => {
-    if (param.get("page") === "Bookings") {
+    if (param.get("page") === "bookings") {
       if (localStorage.getItem("isLoggedIn") === null) {
         localStorage.setItem("url", "/feelhome/admin/dashboard?page=bookings");
-        return <Login />;
+        return (
+          <div>
+            <Login />
+          </div>
+        );
       }
-
-      return <ViewBookings />;
-    }
+      
+      return (
+        <div>
+         
+         <ViewBookings/>
+        </div>
+      );
+    
+}   
   };
 
   return (

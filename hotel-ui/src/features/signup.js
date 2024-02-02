@@ -72,12 +72,13 @@ function SignUp(){
                 <h3>Sign Up</h3>
               </div>
               <div className="card-body">
-                {msg !== "" ? (
-                  <div className="alert alert-danger" role="alert">
+              {msg !== "" && (
+                  <div
+                    className={`alert ${msg === "signup success" ? "alert-success" : "alert-danger"}`}
+                    role="alert"
+                  >
                     {msg}
                   </div>
-                ) : (
-                  ""
                 )}
                 <div className="row " style={{ textAlign: "right" }}>
                       {/* Read Name */}

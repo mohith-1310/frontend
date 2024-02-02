@@ -9,7 +9,15 @@ function ExecutiveDashboard(){
     const process = () => {
         if (!param.get("page")) {
           return (
-            <div>
+            <div style={{
+              backgroundImage: 'url("/hotel.png")',
+              backgroundSize: 'cover',
+              backgroundRepeat: 'no-repeat',
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              height: "100vh",
+            }}>
              
             </div>
           );
